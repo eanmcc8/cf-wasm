@@ -1,14 +1,24 @@
-import cloudflare from '@astrojs/cloudflare';
-import { defineConfig } from 'astro/config';
+// astro.config.{mjs|ts}
+import cloudflare from "@astrojs/cloudflare";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare({
-    imageService: {
-      build: 'compile',
-      runtime: 'passthrough',
+  adapter: cloudflare(),
+
+  output: "server",
+
+  vite: {
+    ssr: {
+      external: [
+        "@cf-wasm/og",
+        "@cf-wasm/resvg",
+        "@cf-wasm/satori",
+        "@cf-wasm/photon",
+      ],
     },
-  }),
+  },
+});
 
   output: 'server',
 
