@@ -20,7 +20,7 @@
     "@cf-wasm/satori": "workspace:*"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^13.5.1",
-    "wrangler": "catalog:"
+    "@astrojs/cloudflare": "^13.7.0",
+    "wrangler": "^3.0.0"
   }
 }
