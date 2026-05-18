@@ -19,12 +19,3 @@ export default defineConfig({
     },
   },
 });
-
-  output: 'server',
-
-  vite: {
-    ssr: {
-      external: ['@cf-wasm/og', '@cf-wasm/resvg', '@cf-wasm/satori', '@cf-wasm/photon'],
-    },
-  },
-});
